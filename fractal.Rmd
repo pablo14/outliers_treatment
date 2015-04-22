@@ -1,0 +1,33 @@
+Eliminando outliers
+====
+
+### Introducción
+Los outliers son los valores extremos que tiene una variable, dependiendo del modelo o requerimiento, puede ser necesario tratarlos ya sea transformando o eliminandolos. 
+
+### Distribución variable "Income"
+<img src="01_income_distribution.JPG" alt="01_income_distribution" style="width: 400px;" align="middle"/>
+
+Observamos como hay pocos valores con valores altos, y muchos con valores bajos.
+
+
+#### Si elegimos eliminarlos...
+Es una pregunta común eleigr cuántos datos dejar afuera, podemos elegir dejar afuera el 1% de los valores mas altos:
+<img src="02_income_p99.JPG" alt="02_income_p99.JPG" style="width: 400px;" align="middle"/>
+
+La distribución se ve muy similar. Si hacemos este proceso iterativamente -sacando el 1% mas grande, y a ese resultado se le vuelve a sacar el 1%, y asi 10 veces- para analizar distintos valores de punto de corte sucede algo curioso, la silutea se mantiene siempre parecida a:
+<img src="03_density_simple.JPG" alt="03_density_simple.JPG" style="width: 400px;" align="middle"/>
+
+Aquí una animación que muestra como el siempre se mantiene similar: 
+<img src="04_fractal_outliers.gif" alt="04_fractal_outliers.gif" style="width: 400px;" align="middle"/>
+
+Es decir, siempre habran muchas personas con ingresos bajos/medios, y pocos con ingresos altos. Lo que naturalmente cambian, son los valores de los ejes. 
+
+Si analizamos el gráfico de densidad, el efecto es un zoom en los datos:
+<img src="05_fractal_outliers_density.gif" alt="05_fractal_outliers_density.gif" style="width: 400px;" align="middle"/>
+
+En este caso en particular se podría  dejar afuera el 0.5 o 1% de los datos. Aunque no siempre es recomendable eliminar outliers, a veces pueden representar fraudes, un desperfecto en una máquina, u otro evento que merece una inspección mayor.
+
+#### Contacto
+Code Available in: https://github.com/pablo14/REPO QUE LE CORRESPONDA
+Made by Pablo C. from [Data Science Heroes](http://datascienceheroes.com)
+ Curso e-learning: Data Science with R (solicitar demo gratuita en info@datascienceheroes.com)
