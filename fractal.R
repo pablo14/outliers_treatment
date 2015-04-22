@@ -1,4 +1,3 @@
-library(Lock5Data)
 library(ggplot2)
 library(animation)
 
