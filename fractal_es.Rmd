@@ -7,7 +7,7 @@ Los outliers son los valores extremos que tiene una variable, dependiendo del mo
 ### Distribución variable "Income"
 <img src="01_income_distribution.JPG" alt="01_income_distribution" style="width: 400px;" align="middle"/>
 
-Ésta será la variable ejemplo, la cual representa los ingresos en $ de clientes de una empresa. Observamos como hay pocos valores con valores altos, y muchos con valores bajos.
+Ésta será la variable ejemplo, la cual representa los ingresos en $ de clientes de una empresa. Observamos como hay pocos casos con valores altos, y muchos con valores bajos.
 
 </br>
 </br>
@@ -19,7 +19,7 @@ Una pregunta común es *¿cuántos casos excluir?* podemos elegir dejar afuera e
 
 La distribución se ve muy similar, ahora llega hasta 300.000 en vez de 500.000.
 
-Si hacemos este proceso **iterativamente** -sacando el 1% mas grande, y a ese resultado se le vuelve a sacar el 1%, y asi sucesivamente por un total de 10 veces- estaremos analizando distintos valores de punto. Sucede algo curioso con el resultado, **la silutea se mantiene siempre parecida** a:
+Si hacemos este proceso **iterativamente** -sacando el 1% mas grande, y a ese resultado se le vuelve a sacar el 1%, y asi sucesivamente por un total de 10 veces- estaremos analizando distintos valores del punto de corte. Sucede algo curioso con el resultado, **la silutea se mantiene siempre parecida** a:
 
 <img src="03_density_simple.JPG" alt="03_density_simple.JPG" style="width: 400px;" align="middle"/>
 
@@ -51,6 +51,6 @@ En este caso en particular se podría  dejar afuera el 0.5 o 1% de los datos. Au
 </br>
 
 #### Contacto
-Código disponible en [github](https://github.com/pablo14/outliers_treatment)
+Código en R y datos disponible en [github](https://github.com/pablo14/outliers_treatment)
 
 Temas de outliers y tratamiento de datos se ven en el **curso e-learning: [Data Science with R](http://datascienceheroes.com/learning.html)** (solicitar demo gratuita en info@datascienceheroes.com)

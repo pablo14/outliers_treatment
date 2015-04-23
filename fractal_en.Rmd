@@ -1,33 +1,56 @@
-Eliminando outliers
+Treating outliers
 ====
 
-### Introducción
-Los outliers son los valores extremos que tiene una variable, dependiendo del modelo o requerimiento, puede ser necesario tratarlos ya sea transformando o eliminandolos. 
+### Introduction
+Outliers are the extreme values that a variable has, depending on the model or requirement, it could be necessary to treat them, either transforming or deleting.
 
-### Distribución variable "Income"
+### Variable "Income" distribution
 <img src="01_income_distribution.JPG" alt="01_income_distribution" style="width: 400px;" align="middle"/>
 
-Observamos como hay pocos valores con valores altos, y muchos con valores bajos.
+This is going to be our main variable in this example, whose represents customer's income in $. We can observe how there are a few cases with very high values, while on the other hand, there are lots of cases with low/mid values.
 
 
-#### Si elegimos eliminarlos...
-Es una pregunta común eleigr cuántos datos dejar afuera, podemos elegir dejar afuera el 1% de los valores mas altos:
+#### If we choose to delete them...
+A common question is: "How many cases do we have to leave out?", we can choose to leave out highest 1%, so we will obtain:
+
 <img src="02_income_p99.JPG" alt="02_income_p99.JPG" style="width: 400px;" align="middle"/>
 
-La distribución se ve muy similar. Si hacemos este proceso iterativamente -sacando el 1% mas grande, y a ese resultado se le vuelve a sacar el 1%, y asi 10 veces- para analizar distintos valores de punto de corte sucede algo curioso, la silutea se mantiene siempre parecida a:
+Now distribution looks very similar to last one, except now it reaches $300.000 instead of $500.000.
+
+If we do this process **iteratively** -deleting highest 1%, and then to that result, we delete again highest 1%, and so on, repeating this process 10 times- we're analyzing different cut-off values in order to leave out extreme values. We obtain a curious result,  **silhouette remains always similar to**:
+
+
 <img src="03_density_simple.JPG" alt="03_density_simple.JPG" style="width: 400px;" align="middle"/>
 
-Aquí una animación que muestra como el siempre se mantiene similar: 
+
+</br>
+</br>
+
+#### Animating the example
+Following animation shows in action this iterative deleting process:
+As we leave out highest 1%, silhouette keeps a similar aspect to:
+
 <img src="04_fractal_outliers.gif" alt="04_fractal_outliers.gif" style="width: 400px;" align="middle"/>
 
-Es decir, siempre habran muchas personas con ingresos bajos/medios, y pocos con ingresos altos. Lo que naturalmente cambian, son los valores de los ejes. 
+In other words, there is _always_ lots of people with low/mid income, and just a few with high income -because of distribution nature-.
+Axis values change within each iteration.
+</br>
 
-Si analizamos el gráfico de densidad, el efecto es un zoom en los datos:
+If we change the histogram plot, by a **density** one, the result is more similar to _zoom_ on the data left side:
+
 <img src="05_fractal_outliers_density.gif" alt="05_fractal_outliers_density.gif" style="width: 400px;" align="middle"/>
 
-En este caso en particular se podría  dejar afuera el 0.5 o 1% de los datos. Aunque no siempre es recomendable eliminar outliers, a veces pueden representar fraudes, un desperfecto en una máquina, u otro evento que merece una inspección mayor.
+_**When we delete the lowest or highest values of any variable, what we are doing is a "zoom" to the area when most cases are.**_
 
-#### Contacto
-Code Available in: https://github.com/pablo14/REPO QUE LE CORRESPONDA
-Made by Pablo C. from [Data Science Heroes](http://datascienceheroes.com)
- Curso e-learning: Data Science with R (solicitar demo gratuita en info@datascienceheroes.com)
+</br>
+</br>
+
+#### Final thoughts
+In this particular case, we could choose to leave out highest 0.5 or 1% of data. However this is not always recommended to delete all outliers, sometimes they represents valuable information such as fraud or a machine failure, or any other event whose deserves further inspection.
+
+</br>
+
+#### Contact
+R code and data available on [github](https://github.com/pablo14/outliers_treatment)
+
+Outliers issues and data treatment are topics of the **e-learning course: [Data Science with R](http://datascienceheroes.com/learning.html)** (request free demo in info@datascienceheroes.com)
