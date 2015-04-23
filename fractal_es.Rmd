@@ -19,7 +19,7 @@ Una pregunta común es *¿cuántos casos excluir?* podemos elegir dejar afuera e
 
 La distribución se ve muy similar, ahora llega hasta 300.000 en vez de 500.000.
 
-Si hacemos este proceso **iterativamente** -sacando el 1% mas grande, y a ese resultado se le vuelve a sacar el 1%, y asi sucesivamente por 10 veces- para analizar distintos valores de punto de corte sucede algo curioso, **la silutea se mantiene siempre parecida** a:
+Si hacemos este proceso **iterativamente** -sacando el 1% mas grande, y a ese resultado se le vuelve a sacar el 1%, y asi sucesivamente por un total de 10 veces- estaremos analizando distintos valores de punto. Sucede algo curioso con el resultado, **la silutea se mantiene siempre parecida** a:
 
 <img src="03_density_simple.JPG" alt="03_density_simple.JPG" style="width: 400px;" align="middle"/>
 
@@ -40,7 +40,7 @@ Si cambiamos el gráfico histograma por uno de **densidad**, el efecto que apare
 
 <img src="05_fractal_outliers_density.gif" alt="05_fractal_outliers_density.gif" style="width: 400px;" align="middle"/>
 
-_**Cuando se eliminan los valores mas bajos, o mas altos de una variable, lo que se consigue es hacer un acercamiento hacia donde se encuentra la mayor cantidad de casos.**_
+_**Cuando se eliminan los valores mas bajos, o mas altos de una variable, lo que se consigue es hacer un acercamiento -ó "zoom"- hacia donde se encuentra la mayor cantidad de casos.**_
 
 </br>
 </br>
@@ -52,6 +52,5 @@ En este caso en particular se podría  dejar afuera el 0.5 o 1% de los datos. Au
 
 #### Contacto
 Código disponible en [github](https://github.com/pablo14/outliers_treatment)
-Hecho por Pablo C. de [Data Science Heroes](http://datascienceheroes.com)
 
-Temas de outliers y tratamiento de datos se ven en el curso e-learning: [Data Science with R](http://datascienceheroes.com/learning.html) (solicitar demo gratuita en info@datascienceheroes.com)
+Temas de outliers y tratamiento de datos se ven en el **curso e-learning: [Data Science with R](http://datascienceheroes.com/learning.html)** (solicitar demo gratuita en info@datascienceheroes.com)
