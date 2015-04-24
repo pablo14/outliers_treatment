@@ -1,3 +1,5 @@
+Lidiando con outliers
+====
 
 ### Introducción
 Los outliers son los valores extremos que tiene una variable, dependiendo del modelo o requerimiento, puede ser necesario tratarlos ya sea transformando o eliminandolos. 

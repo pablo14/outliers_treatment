@@ -1,5 +1,7 @@
 library(ggplot2)
 library(animation)
+library(knitr)
+library(markdown)
 
 ## Deactivate scientific notation
 options(scipen=999)
@@ -41,4 +43,11 @@ saveGIF({
     print(ggplot(data_copy, aes(x=Income)) +geom_density(alpha = 0.4,fill="blue",adjust=0.4))
   }
 },  movie.name= "fractal_outliers_density.gif", interval = 0.3, ani.width = 600, ani.height = 600)
+
+#### Exporting to html
+# knit("fractal_en.Rmd",encoding="UTF-8")
+# markdownToHTML("fractal_en.md", "Dynamic analysis on outliers.html")
+
+# knit("fractal_es.Rmd",encoding="UTF-8")
+# markdownToHTML("fractal_es.md", "Análisis dinámico de outliers.html",encoding="UTF-8")
 

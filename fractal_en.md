@@ -1,3 +1,5 @@
+Treating outliers
+====
 
 ### Introduction
 Outliers are the extreme values that a variable has, depending on the model or requirement, it could be necessary to treat them, either transforming or deleting.
